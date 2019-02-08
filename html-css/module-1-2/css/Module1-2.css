@@ -1,0 +1,95 @@
+ul.hr {
+    padding: 10px; 
+    margin-left: 350px;
+    margin-right: 300px;
+  }
+  ul.hr li {
+    display: inline; 
+    margin-right: 0px; 
+    margin-left: 50px;
+    padding: 15px;
+  }
+  a {
+    text-decoration: none;
+    font-family: Playfair Display;
+    cursor: pointer; 
+    
+  }
+  a.first {
+      color: #03a9f4;
+     
+  }
+  a.head {
+      color:#626262;
+     
+  }
+  ul.image1 {
+    margin-top: 100px; 
+    padding: 10px; 
+    margin-left: 150px;
+  }
+  ul.image1 li {
+    display: inline;
+    margin-right: 0px; 
+    margin-left: 60px;
+    padding: 15px;
+  }
+  
+  .morelife  { 
+    display: inline-block;
+    padding: 15px;
+    width: 580px;
+    margin-right: 80px;
+    margin-left: 60px;
+    
+ }
+ .morelife2 {
+  display: inline-block;
+  padding: 0px;
+  width: 410px;
+ }
+ h2 {
+     color: #b4ad9e;
+     font-family: Ubuntu; 
+     font-size: 15px;
+ }
+ h3 {
+     color: #626262;
+     font-size: 30px;
+     font-family: Playfair Display;  
+ }
+ p {
+     color: #626262;
+     text-align: justify;  
+     font-family: Playfair Display;
+    
+ }
+ .right {
+    margin-left: 150px;
+ }
+ .myButton {
+	-moz-box-shadow:inset 0px 34px 0px -15px #ffffff;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #ffffff;
+	box-shadow: inset 0px 34px 0px -15px #ffffff;
+	background-color:#ffffff;
+	border: 1px solid #bfc4cf;
+	display: inline-block;
+	cursor: pointer;
+	color:#706770;
+	font-family: Playfair Display;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 15px 30px;
+	text-decoration:none;
+    text-shadow: 0px -1px 0px #ffffff;
+    margin: 50px 500px 20px 630px;
+}
+.myButton:hover {
+	background-color:#fcfdff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+  
