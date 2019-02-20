@@ -1,0 +1,92 @@
+ul.hr {
+    padding: 10px; 
+    margin-left: 350px;
+    margin-right: 300px;
+  }
+  ul.hr li {
+    display: inline; 
+    margin-right: 0px; 
+    margin-left: 50px;
+    padding: 15px;
+    font-size: 14px;
+  }
+  a {
+    text-decoration: none;
+    font-family: Playfair Display;
+    cursor: pointer; 
+    
+  }
+  a.first {
+      color: #03a9f4;
+     
+  }
+  a.head {
+      color:#626262;
+     
+  }
+  .image_morelife {
+      margin-left: 150px;
+  }
+  .morelife  { 
+    display: inline-block;
+    padding: 15px;
+    width: 580px;
+    margin-right: 80px;
+    margin-left: 60px;
+    
+ }
+ .morelife2 {
+  display: inline-block;
+  padding: 0px;
+  width: 410px;
+ }
+ h2 {
+     color: #b4ad9e;
+     font-family: Ubuntu Light; 
+     font-size: 14px;
+ }
+ h3 {
+     color: #626262;
+     font-size: 30px;
+     font-family: Playfair Display;  
+ }
+ p {
+     color: #626262;
+     text-align: justify;  
+     font-family: Playfair Display;
+     font-size: 14px;
+     margin-inline-end: 10px;
+    
+ }
+ .scnd_colomn {
+    margin-inline-end: -10px;
+ }
+ .right {
+    margin-left: 150px;
+ }
+ .myButton {
+	-moz-box-shadow:inset 0px 34px 0px -15px #ffffff;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #ffffff;
+	box-shadow: inset 0px 34px 0px -15px #ffffff;
+	background-color:#ffffff;
+	border: 1px solid #bfc4cf;
+	display: inline-block;
+	cursor: pointer;
+	color:#706770;
+	font-family: Playfair Display;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 15px 30px;
+	text-decoration:none;
+    text-shadow: 0px -1px 0px #ffffff;
+    margin: 50px 500px 20px 610px;
+}
+.myButton:hover {
+	background-color:#fcfdff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+  
