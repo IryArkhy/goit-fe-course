@@ -132,6 +132,13 @@ ul {
     padding-bottom: 10px;
   
 }
+.little_box:hover > p  {
+    background-color: #1abc9c;
+
+}
+.little_box:hover > p > span {
+    background-color: #7fd9c7;
+}
 
 .des_2 {
     background-color: #1abc9c;
