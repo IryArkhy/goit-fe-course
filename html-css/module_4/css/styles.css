@@ -19,14 +19,13 @@ h1::first-letter {
 }
 
 .menu {
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-weight: bold;
     font-size: 14px;
 }
 
 .mart {
     margin-right: 500px;
-    margin-block-end: 0!important;
 }
 
 li {
@@ -40,9 +39,8 @@ a {
     color: #515151;
 }
 
-#special {
+.m:hover {
     color: #1abc9c;
-    margin-right: 20px;
 }
 
 nav {
@@ -58,8 +56,7 @@ ul {
     font-weight: 800;
     font-size: 48px;
     margin-left: 7em;
-    color: #515151;
-   
+    color: #515151;  
 }
 
 .header2 {
@@ -67,12 +64,12 @@ ul {
 }
 
 .products::after {
-    content: "________";
+    content: "";
+    width: 164px;
+    height: 7px;
     display: block;
-    margin-top: 28px;
-    margin: 0 0 0 148px; 
-    color: #1abc9c;
-
+    background-color: #1abc9c;
+    margin: 32px 155px;
 }
 
 .header2::after {
@@ -81,7 +78,6 @@ ul {
     margin-top: 28px;
     margin: 0 0 0 75px; 
     color: #1abc9c;
-
 }
 
 .fifth_im, .eightth_im {
@@ -120,61 +116,48 @@ ul {
 .description {
     background-color: #323232; 
     color: #ffffff; 
-    width: 245px;
-    height: 29px;
+    width: 191px;
+    height: 40px;
     margin: -4px 0 0 0;
     font-family: Roboto;
     font-weight: 500;
     font-size: 18px;
-    line-height: 1;
     vertical-align: bottom;
     padding-left: 10px;
-    padding-bottom: 10px;
+    line-height: 2;
+    vertical-align: -10px;
+    text-align: center;
+   
   
 }
 .little_box:hover > p  {
     background-color: #1abc9c;
 
 }
-.little_box:hover > p > span {
+.little_box:hover > .price  {
     background-color: #7fd9c7;
 }
 
-.des_2 {
-    background-color: #1abc9c;
-}
 
-.d1 {
+ .price {
     display: inline-block;
-    margin-left: 91.3px;
-    padding: 10px 6px 11px 4px;
+    width: 54px;
+    height: 40px;
+    margin: -4px 0 0 0;
+    font-family: Roboto; 
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
     background-color: #8c8c8c;
+    line-height: 2;
+    vertical-align: -10px;
+    text-align: center;
 }
 
-.d2 {
-    display: inline-block;
-    margin-left: 76.5px;
-    padding: 10px 6px 11px 3px;
-    background-color: #8c8c8c;
+.price, .description {
+    float: left;
 }
 
-.des_2child {
-    background-color: #7fd9c7;
-}
-
-.d3 {
-    display: inline-block;
-    margin-left: 66.4px;
-    padding: 10px 6px 11px 3px;
-    background-color: #8c8c8c;
-}
-
-.d4 {
-    display: inline-block;
-    margin-left: 73px;
-    padding: 10px 6px 11px 3px;
-    background-color: #8c8c8c;
-}
 
 .low1, .low2, .low3 {
     float: left;
@@ -188,7 +171,7 @@ ul {
 }
 
 .hot_news {
-    font-family: Open Sans;
+    font-family: "Open Sans";
     color: #555252;
     font-size: 18px;
     font-weight: 400;
@@ -204,14 +187,14 @@ ul {
 }
 
 .hot_news_intro {
-    font-family: Open Sans;
+    font-family: "Open Sans";
     color: #555252;
     font-size: 14px;
     font-weight: 100;
 }
 
 .button {
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-weight: 100;
     color: #ffffff;
     background-color: #4ec6ab;
