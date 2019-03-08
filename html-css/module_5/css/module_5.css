@@ -70,7 +70,6 @@ nav {
 
 .middle_box {
     position: absolute;
-    /* width: 80%; */
     top: 40%;
     left: 55%;
     transform: translate(-50%, -50%);
@@ -83,7 +82,6 @@ nav {
     color: #ffffff;
     display: inline-block;
     width: 80vw;
-    /* margin-bottom: 20px; */
 }
 .tours_info {
     color: #ffffff;
@@ -154,14 +152,9 @@ nav {
 .items {
     margin-left: 10%;
 }
-/* .cloths:first-child {
-    width: 255px;
-    height: 322px;
-} */
 
 .description, .price {
     display: inline-block;
-    /* float: left;   */
 }
 
 .description {
