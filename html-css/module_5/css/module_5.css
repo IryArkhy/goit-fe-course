@@ -154,10 +154,10 @@ nav {
 .items {
     margin-left: 10%;
 }
-.cloths:first-child {
+/* .cloths:first-child {
     width: 255px;
-    /* height: 322px; */
-}
+    height: 322px;
+} */
 
 .description, .price {
     display: inline-block;
