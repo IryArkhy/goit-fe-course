@@ -73,6 +73,8 @@ nav {
     top: 40%;
     left: 55%;
     transform: translate(-50%, -50%);
+    padding: 200px;
+    width: 62vw;
    
 }
 
@@ -81,7 +83,8 @@ nav {
     font-size: 55px;
     color: #ffffff;
     display: inline-block;
-    width: 80vw;
+    margin-bottom: 20px;
+    /* width: 700px; */
 }
 .tours_info {
     color: #ffffff;
@@ -89,9 +92,9 @@ nav {
     font-weight: 300;
     display: block;
     font-size: 22px;
-    margin: -20px 0 0 145px;
 }
-.tours::before {
+.middle_box::before {
+    
     content: "\276E";
     width: 100px;
     height: 100px;
@@ -102,9 +105,13 @@ nav {
     line-height: 1.2;
     vertical-align: -20px;
     text-align: center;
-    margin: 0 4% 0 0;
+    margin: 0 100px 0 0;
+    position: absolute;
+    left: 3%;
+    top: 43%;
 }
-.tours::after {
+.middle_box::after {
+   
     content: "\276F";
     width: 100px;
     height: 100px;
@@ -116,7 +123,18 @@ nav {
     vertical-align: -20px;
     text-align: center;
     margin: 0px 0 0 4%;
+    position: absolute;
+    right: 18%;
+    bottom: 37%;
 }
+
+.middle_box:hover:after  {
+    background-color: #1abc9c;
+}
+.middle_box:hover::before {
+    background-color: #1abc9c; 
+}
+
 
 /*cloths section*/
 
