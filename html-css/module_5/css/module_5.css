@@ -13,12 +13,14 @@ html {
 nav {
     margin-bottom: 30px;
 }
+
 .menu {
     list-style-type: none;
     display: inline-block;
-    padding: 0 10vw 0 10vw;
+    padding: 0 20px 0 20px;
 }
-.menu_items > a {
+
+.menu_items>a {
     text-decoration: none;
     font-family: "Open Sans";
     font-weight: 600;
@@ -33,28 +35,32 @@ nav {
     font-family: Roboto;
     font-weight: 200;
     font-size: 30px;
-    margin: 0 40vw 0 0;
-    color: #555252;   
+    margin: 0 20em 0 0;
+    color: #555252;
 }
-.menu > li {
+
+.menu>li {
     float: left;
-    display: inline-block; 
+    display: inline-block;
 }
+
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
+
 .menu_items:nth-child(-n+6) {
-    margin-right: 2vw;
+    margin-right: 2em;
 }
+
 .logo::before {
     content: "M";
     color: #1abc9c;
     font-weight: 500;
 }
 
-.menu_items:hover > a {
+.menu_items:hover>a {
     color: #1abc9c;
 }
 
@@ -65,17 +71,23 @@ nav {
     background-size: cover;
     width: 100%;
     height: 600px;
-    position: relative;
 }
 
 .middle_box {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.container {
     position: absolute;
     top: 40%;
-    left: 55%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    padding: 200px;
-    width: 62vw;
-   
+    padding: 180px;
+    width: 48.5%;
+    overflow: hidden;
+
 }
 
 .tours {
@@ -84,17 +96,18 @@ nav {
     color: #ffffff;
     display: inline-block;
     margin-bottom: 20px;
-    /* width: 700px; */
 }
+
 .tours_info {
     color: #ffffff;
     font-family: Roboto;
     font-weight: 300;
-    display: block;
+    display: inline-block;
     font-size: 22px;
 }
-.middle_box::before {
-    
+
+.container::before {
+
     content: "\276E";
     width: 100px;
     height: 100px;
@@ -105,13 +118,13 @@ nav {
     line-height: 1.2;
     vertical-align: -20px;
     text-align: center;
-    margin: 0 100px 0 0;
     position: absolute;
-    left: 3%;
-    top: 43%;
+    left: 0;
+    top: 44%;
 }
-.middle_box::after {
-   
+
+.container::after {
+
     content: "\276F";
     width: 100px;
     height: 100px;
@@ -122,19 +135,19 @@ nav {
     line-height: 1.2;
     vertical-align: -20px;
     text-align: center;
-    margin: 0px 0 0 4%;
+    margin: 0px 0 0 0%;
     position: absolute;
-    right: 18%;
-    bottom: 37%;
+    right: 0;
+    bottom: 36%;
 }
 
-.middle_box:hover:after  {
+.container:hover:after {
     background-color: #1abc9c;
 }
-.middle_box:hover::before {
-    background-color: #1abc9c; 
-}
 
+.container:hover::before {
+    background-color: #1abc9c;
+}
 
 /*cloths section*/
 
@@ -145,7 +158,7 @@ nav {
 }
 
 .new {
-    margin: 10vh 0 10vh 35vw;
+    margin: 6% 0 6% 37%;
     display: inline-block;
     font-family: Roboto;
     font-weight: ;
@@ -167,17 +180,19 @@ nav {
     margin: 0 2em 2em 0;
     position: relative;
 }
+
 .items {
     margin-left: 10%;
 }
 
-.description, .price {
+.description,
+.price {
     display: inline-block;
 }
 
 .description {
-    background-color: #323232; 
-    color: #ffffff; 
+    background-color: #323232;
+    color: #ffffff;
     width: 191px;
     height: 40px;
     margin: 0px 0 0 0;
@@ -195,7 +210,7 @@ nav {
     width: 54px;
     height: 40px;
     margin: 0px 0 0 -4px;
-    font-family: Roboto; 
+    font-family: Roboto;
     font-size: 18px;
     font-weight: 500;
     color: #ffffff;
@@ -245,7 +260,8 @@ nav {
     transform: translate(-50%, -50%);
     display: none;
 }
-.hover:hover > .inner_menu {
+
+.hover:hover>.inner_menu {
     display: block;
 }
 
@@ -255,6 +271,7 @@ nav {
     border: 1px solid white;
     background-color: #323232;
 }
+
 .adding {
     display: inline-block;
     font-family: "Open Sans";
@@ -263,9 +280,12 @@ nav {
     margin-left: 18px;
     line-height: 2;
     vertical-align: 8px;
-    
+
 }
-.heart, .clock, .arrows {
+
+.heart,
+.clock,
+.arrows {
     width: 30px;
     height: 30px;
     border: 1px solid white;
@@ -276,8 +296,9 @@ nav {
 .cart {
     position: absolute;
     top: 50%;
-    left: 14%;   
+    left: 14%;
 }
+
 .cart_img {
     margin: 10px 0 0 10px;
 
@@ -292,22 +313,37 @@ nav {
     top: 30%;
     left: 41%;
 }
+
 .clock {
     top: 30%;
     left: 67.5%;
 }
-.heart:hover  {
+
+.heart:hover {
     background-color: #1abc9c;
 }
-.arrows:hover  {
+
+.arrows:hover {
     background-color: #1abc9c;
 }
-.clock:hover  {
+
+.clock:hover {
     background-color: #1abc9c;
 }
-.cart:hover  {
+
+.cart:hover {
     background-color: #1abc9c;
 }
+
+.cloths:hover > .description {
+    background-color: #1abc9c;
+}
+
+.cloths:hover > .price {
+    background-color: #7fd9c7;
+}
+
+
 
 /*Footer*/
 
@@ -316,7 +352,7 @@ footer {
     height: 88px;
 }
 
-footer > p {
+footer>p {
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 16px;
@@ -324,6 +360,7 @@ footer > p {
     line-height: 5;
     vertical-align: -10px;
 }
-p > span {
+
+p>span {
     color: #1abc9c;
 }
