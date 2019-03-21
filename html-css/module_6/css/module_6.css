@@ -298,14 +298,35 @@ nav {
     margin-bottom: 30px;
 }
 
-.hover {
+.hover1 {
     position: absolute;
     width: 100%;
     height: 470px;
     z-index: 2;
     top: 0;
+    background-image: url(../img/beard_guy.png);
     opacity: 0;
+}
+.hover2 {
+    position: absolute;
+    width: 100%;
+    height: 470px;
+    z-index: 2;
+    top: 0;
+    background: linear-gradient(rgba(237, 136, 138, 0.9),
+        rgba(238, 216, 135, 0.9)), url(../img/photo_guy.png);
+    opacity: 0;
+}
 
+.hover3 {
+    position: absolute;
+    width: 100%;
+    height: 470px;
+    z-index: 2;
+    top: 0;
+    background: linear-gradient(rgba(237, 136, 138, 0.9),
+        rgba(238, 216, 135, 0.9)), url(../img/third_guy.png);
+    opacity: 0;
 }
 
 .socials {
@@ -406,11 +427,39 @@ span {
 
 }
 
-.hover:hover {
+.hover1:hover {
     opacity: 1;
-    background: linear-gradient(rgba(237, 136, 138, 0.9),
-        rgba(238, 216, 135, 0.9));
+    -webkit-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
+    -moz-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
+    box-shadow: 15px 14px 0px 0px rgba(149, 225, 211, 1);
+    -webkit-transform: translate(-15px, -14px);
+    transform: translate(-15px, -14px);
+    -webkit-transition: all 0.3s ease;
+    ;
+    -moz-transition: all 0.3s ease;
+    ;
+    -o-transition: all 0.3s ease;
+    ;
+    transition: all 0.3s ease;
+}
 
+.hover2:hover {
+    opacity: 1;
+    -webkit-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
+    -moz-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
+    box-shadow: 15px 14px 0px 0px rgba(149, 225, 211, 1);
+    -webkit-transform: translate(-15px, -14px);
+    transform: translate(-15px, -14px);
+    -webkit-transition: all 0.3s ease;
+    ;
+    -moz-transition: all 0.3s ease;
+    ;
+    -o-transition: all 0.3s ease;
+    ;
+    transition: all 0.3s ease;
+}
+.hover3:hover {
+    opacity: 1;
     -webkit-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
     -moz-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
     box-shadow: 15px 14px 0px 0px rgba(149, 225, 211, 1);
