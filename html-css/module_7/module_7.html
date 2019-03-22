@@ -47,14 +47,14 @@
     </section>
     
     <section class="contact">
-        <h2>CONTACT US</h2>
-        <p>Proin iaculis purus consequat sem cure.</p>
+        <h2 class="headding2">CONTACT US</h2>
+        <p class="service_descrip">Proin iaculis purus consequat sem cure.</p>
         <div class="cont_wraper">
             <form class="form_wraper" action="#">
                 <div class="it_wraper">
-                    <input type="text" name="name" id="name" placeholder="YOUR NAME*">
-                    <input type="email" name="email" id="email" placeholder="YOUR E-MAIL*">
-                    <input type="text" name="subject" id="subject" placeholder="SUBJECT*">
+                    <input pattern="(?=.*[a-z]).{2,}" type="text" name="name" id="name" placeholder="YOUR NAME*" required>
+                    <input type="email" name="email" id="email" placeholder="YOUR E-MAIL*" required>
+                    <input type="text" name="subject" id="subject" placeholder="SUBJECT*" required>
                 </div>
                 <textarea name="masage" id="message" cols="20" rows="10" placeholder="YOUR MASAGE*"></textarea>
                 <input id="send" type="submit" value ="SEND MESSAGE">
