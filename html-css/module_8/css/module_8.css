@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    outline: 1px solid blue;
+}
+html {
+    margin: 0;
+    padding: 0;
 }
 
 /* montserrat-regular - latin */
@@ -83,16 +88,21 @@
          url('../fonts/roboto-v19-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
   }
 
-.main_wraper {
+  .offer {
     width: 100%;
-    height: ;
+    height: auto;
     background: linear-gradient(rgba(0, 0, 0, 0.192),
-    rgba(0, 0, 0, 0.192)), url(../img/bg_tab.png);
+    rgba(0, 0, 0, 0.192)), url(../img/bg_desk.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+.main_wraper {
+    width: 100%;
     padding-bottom: 9rem;
+    padding-top: 1rem;
 }
+
 
 .log_sign > a {
     font-family: 'Montserrat';
@@ -104,8 +114,7 @@
 }
 .log_sign {
     display: flex;
-    justify-content: space-evenly;
-    /* height: 540px; */
+    justify-content: space-between;
 }
 
 .one {
@@ -114,7 +123,6 @@
 }
 
 .two {
- padding: 0 20px 0 0px; 
  white-space: nowrap;
  font-size: 14px;
  padding: 0.1em 0.5em ; 
@@ -122,7 +130,6 @@
 }
 
 .three {
- padding: 0 20px 0 0px; 
  white-space: nowrap;
  font-size: 14px;
  padding: 0.1em 0.5em ; 
@@ -138,6 +145,9 @@
     border-radius: 2ex;
 }
 
+main {
+    padding: 0 1rem;
+}
 .head_first {
     font-family: 'Montserrat';
     font-style: normal;
@@ -150,6 +160,7 @@
 .lil_ {
     font-family: Roboto;
     font-weight: 100;
+    font-size: 18px;
     color: rgb(255, 255, 255);
     text-align: center;
     margin-bottom: ;
@@ -177,268 +188,70 @@
 }
 
 /* Second section */
-
-.title2{
-    font-size: 1.375rem;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin-bottom: 0.875rem;
+.partners {
+    padding: 4.375rem 0 3.75rem 0;
 }
-
-.partner{
-    margin-bottom: 1.75rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
- 
-.content{
-    max-width: 61.25%;
-    margin: 0 auto;
-    margin-bottom: 1.8125rem;
-}
-
-.partner:last-child{
-    margin-bottom: 0;
-}
-
-.foto{
+.ph_container {
     position: relative;
+    width: 125px;
+    height: 125px;
+    margin: auto;
+    margin-bottom: 1.25rem;
+}
+.photo1 {
+    display: block;
+}
+.photo2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.head_second {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21.98px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.9375rem;
+    padding: 1rem;
+}
+.people {
+    margin-bottom: 1.875rem;
+    padding: 0 3rem;
+}
+h3 {
+    font-size: 13.97px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-align: center;
     margin-bottom: 1.25rem;
 }
 
-.fotopartner{
-    position: relative;
-}
-
-.icon{
-    position: absolute;
-    top: 71%;
-    width: 2.375rem;
-    height: 2.375rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    border: 0.1875rem solid rgb(255, 255, 255);
-    left: 69%;
-    display: inline-block;
-}
-
-.icon1{
-    background-color: rgb(255, 78, 80);
-    background-image: url(../img/icons/tv.png);
-}
-
-.icon2{
-    background-color: rgb(255, 165, 7);
-    background-image: url(../img/icons/bottle.png);
-}
-
-.icon3{
-    background-color: rgb(28, 215, 173);
-    background-image: url(../img/icons/coffee.png);
-}
-
-.icon4{
-    background-color: rgb(78, 115, 219);
-    background-image: url(../img/icons/plane.png);
-}
-
-.name{
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    color: rgb(51, 51, 51);
-}
-
-.bio{
-    font-size: 0.875rem;
-    font-family: 'Roboto';
+.descrip {
+    font-family: 'Roboto', serif;
+    font-size: 13.97px;
+    font-weight: 300;
     color: rgb(102, 102, 102);
     text-align: center;
 }
 
-.clickpartners{
-    width: 17.5rem;
-    margin-left: 1.125rem;
-    font-size: 0.875rem;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    color: rgb(255, 78, 80);
-    border: 0.1875rem solid rgb(255, 78, 80);
-    background-color: transparent;
-    border-radius: 1.5rem;
-    padding-top: 0.875rem;
-    padding-bottom: 0.75rem;
-}
-@media (max-width:320px) {
-    .log_sign {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .one {
-    order: 3;
-    margin: 5rem 0 1rem 0;
-    }
-    .two {
-    order: 1;
-    margin: 0rem 0 0 1rem;
-    }
-    .three {
-    order: 2;
-    }
+.click {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff4e50;
+    text-decoration: none;
+    padding: 0 2.4rem;
+    display: block;
+    width: 190px;
+    height: 40px;
+    border: 2px solid #ff4e50;
+    border-radius: 3ex;
+    line-height: 2.8;
+    text-align: center;
+    margin: 0 auto 1.8rem;
 }
 
-@media(min-width: 768px) and (max-width: 1439px) {
-    body {
-        padding-bottom: 40px;
-    }
 
-    .container {
-        max-width: 768px;
-    }
 
-    .but {
-        left: 73%;
-        top: 6%;
-    }
 
-    .logo {
-        left: 20%;
-        top: 6%;
-        transform: translateX(0);
-    }
-
-    .info {
-        width: 503px;
-        top: 29%;
-    }
-
-    .title {
-        font-size: 52px;
-        margin-bottom: 40px;
-    }
-
-    .Two {
-        font-size: 24px;
-        margin-bottom: 34px;
-    }
-
-    .clickInfo {
-        width: 226px;
-        margin-left: 128px;
-    }
-
-    .content {
-        width: 59, 635416666%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-bottom: 40px;
-    }
-
-    .partner {
-        width: 194px;
-    }
-
-    .backgr {
-        margin-bottom: 72px;
-        padding: 350px 0 350px 0;
-    }
-
-    .title2 {
-        margin-bottom: 32px;
-    }
-
-    .partner {
-        margin-bottom: 58px;
-    }
-
-    .partner:nth-child(even) {
-        margin-bottom: 0;
-    }
-
-    .nameorder {
-        order: 1;
-    }
-
-    .nameorder2 {
-        order: 1;
-    }
-
-    .clickpartners {
-        width: 192px;
-        margin-left: 288px;
-    }
-}
-
-@media(min-width: 90rem) {
-    body{
-        padding-bottom: 4.625rem;
-    }
-    .container {
-        max-width: 90rem;
-    }
-    .but{
-        left: 71%;
-        top: 6%;
-    }
-    .logo{
-        left: 23%;
-        top: 6%;
-        transform: translateX(-50%);
-    }
-
-    .info {
-        width: 31.5rem;
-        top: 29%;
-    }
-
-    .title {
-        font-size: 3.25rem;
-        margin-bottom: 2.5rem;
-    }
-    .Two{
-        font-size: 1.5rem;
-        margin-bottom: 2.1875rem;
-    }
-    .clickInfo{
-        width: 14.0625rem;
-        margin-left: 8rem;
-    }
-
-    .content {
-        width: 65.2777777%;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 2.5rem;
-    }
-
-    .partner {
-        width: 12.125rem;
-    }
-    .backgr{
-        margin-bottom: 4.375rem;
-        padding: 21.875rem 0 21.875rem 0;
-    }
-    .title2{
-        margin-bottom: 2.125rem;
-    }
-    .partner{
-        margin-bottom: 0;
-    }
-    .nameorder{
-        order: 1;
-    }
-    .nameorder2{
-        order: 1;
-    }
-    .clickpartners{
-        width: 12rem;
-        margin-left: 39rem;
-    }
-}

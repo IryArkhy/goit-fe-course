@@ -1,0 +1,122 @@
+@media (max-width:320px) {
+    .log_sign {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .one {
+    order: 3;
+    margin: 5rem 0 1rem 0;
+    }
+    .two {
+    order: 1;
+    margin: 0 0 0 0;
+    }
+    .three {
+    order: 2;
+    }
+}
+@media (min-width:321px) and (max-width:768px) {
+    .main_wraper {
+        padding-bottom: 14.6875rem;
+        padding-top: 1rem;
+        
+    }
+    header {
+        margin: 0 0 10rem 0;
+    }
+    main {
+        max-width: 600px;
+        margin: auto;
+    }
+    .three {
+        padding: 0;
+        margin: 0;
+    }
+    .head_first {
+        font-size: 51.97px;
+    }
+    .log_sign {
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+    .one {
+        margin-left: 3.125rem;
+    }
+
+    .three {
+        margin-right: 4.375rem;
+    }
+    .people {
+        max-width: 200px;
+    }
+    .wraper2 {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 441px) {
+    .people {
+        padding: 0;
+        margin: 0;
+    }
+   }
+@media (max-width: 380px) {
+    .log_sign {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .one {
+    order: 3;
+    margin: 5rem 0 1rem 0;
+    }
+    .two {
+    order: 1;
+    margin: 0 0 0 0;
+    }
+    .three {
+    order: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .head_first {
+        font-size: 52px;
+    }
+    .main_wraper {
+        padding-bottom: 14.6875rem;
+        
+    }
+    header {
+        margin: 0 0 10rem 0;
+    }
+    main {
+        max-width: 600px;
+        margin: auto;
+    }
+    ..lil_ {
+        font-size: 24px;
+    }
+    .wraper2 {
+        display: flex;
+        justify-content: center;  
+    }
+    .offer {
+        margin-bottom: 4.375rem;
+    }
+    .wraper2_1, .wraper2_2 {
+        display: flex;
+        justify-content: space-between;  
+        margin-bottom: 2.5rem;
+        
+    }
+    .people {
+        max-width: 220px;
+        padding: 0;
+        margin: 0 1rem;
+    }
+    .partners {
+        padding: 0 15.625rem;
+        margin-bottom: 2.5rem;
+    }
+}
