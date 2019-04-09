@@ -136,7 +136,7 @@ nav {
     line-height: 1.2;
     vertical-align: -20px;
     text-align: center;
-    margin: 0px 0 0 0%;
+    margin: 0 0 0 0;
     position: absolute;
     right: 0;
     bottom: 36%;
@@ -155,16 +155,17 @@ nav {
 .collection {
     width: 100%;
     background-color: #e9f0fd;
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 
 .new {
-    margin: 6% 0 6% 37%;
-    display: inline-block;
+    text-align: center;
+    display: block;
     font-family: Roboto;
     font-weight: ;
     font-size: 40px;
     color: #555252;
+    margin-bottom: 80px;
 }
 
 .new::after {
@@ -173,7 +174,8 @@ nav {
     height: 7px;
     background-color: #1abc9c;
     display: block;
-    margin: 0.5em 0 0 2.5em;
+    margin: auto;
+    margin-top: 30px;
 }
 
 .cloths {
@@ -183,7 +185,7 @@ nav {
 }
 
 .items {
-    margin-left: 10%;
+    margin-left: 10rem;
 }
 
 .description,
