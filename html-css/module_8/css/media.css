@@ -55,12 +55,33 @@
         justify-content: space-between;
     }
 }
-@media (max-width: 441px) {
+@media (min-width:321px) and (max-width: 470px) {
     .people {
         padding: 0;
         margin: 0;
     }
+    .log_sign > a {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+    .wraper2_2 {
+        margin-right: 0;
+    }
+   .p1, .p2 {
+       padding: 0 1rem;
    }
+   .main_wraper {
+    padding-bottom: 8rem;
+   }
+   header {
+       margin-bottom: 3rem;
+   }
+   .one {
+    margin-top: 0;
+   }
+}
+
+
 @media (max-width: 380px) {
     .log_sign {
         flex-wrap: wrap;
@@ -94,7 +115,29 @@
         max-width: 600px;
         margin: auto;
     }
-    ..lil_ {
+    .log_sign {
+        justify-content: start;
+        position: relative;
+    }
+    .log_sign > a {
+        margin: 0;
+    }
+    .one, .two, .three {
+       position: absolute; 
+    }
+    .one {
+        left: 10%;
+    }
+
+    .two {
+        right: 25%;
+    }
+    .three {
+        right: 13%;
+        padding: 1px 8px;
+    }
+
+    .lil_ {
         font-size: 24px;
     }
     .wraper2 {
