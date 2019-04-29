@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/module_10.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <title>MoGo</title>
 </head>
 
 <body>
@@ -110,7 +111,11 @@
         <div class="pic_container">
             <div class="guy_1">
                 <div id="example">
-                    <img class="first_ph" src="./img/first_guy.png" alt="Graphic designer" width="380" height="470">
+                    <picture>
+                        <source srcset="./img/first_guy@2x.png 2x, ./img/first_guy-min.png 1x">
+                        <img class="first_ph" src="./img/first_guy-min.png" alt="Graphic designer" width="380"
+                            height="470">
+                    </picture>
                     <div class="hover1">
                         <div class="socials">
                             <div class="soc-icons-wraper">
@@ -141,7 +146,10 @@
             </div>
             <div class="guy_2">
                 <div id="example2">
-                    <img src="./img/photo_guy.png" alt="Branding/UX designer" width="380">
+                    <picture>
+                        <source srcset="./img/photo_guy@2x.png 2x, ./img/photo_guy-min.png 1x">
+                        <img src="./img/photo_guy-min.png" alt="Branding/UX designer" width="380">
+                    </picture>
                     <div class="hover2">
                         <div class="socials">
                             <div class="soc-icons-wraper">
@@ -172,7 +180,10 @@
             </div>
             <div class="guy_3">
                 <div id="example3">
-                    <img src="./img/third_guy.png" alt="Developer" width="380">
+                    <picture>
+                        <source srcset="./img/third_guy@2x.png 2x, ./img/third_guy-min.png 1x">
+                        <img src="./img/third_guy-min.png" alt="Developer" width="380">
+                    </picture>
                     <div class="hover3">
                         <div class="socials">
                             <div class="soc-icons-wraper">
