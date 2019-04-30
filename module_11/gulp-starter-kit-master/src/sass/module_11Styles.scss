@@ -133,7 +133,7 @@
   .first {
     background: -webkit-gradient(linear,
       left top, left bottom,
-      from(rgba(245, 123, 112, 0.9)),
+      from($main-color-1),
       to(rgba(252, 225, 138, 0.9))), url(../images/BG@2x.png), center;
     background: -webkit-linear-gradient(rgba(245, 123, 112, 0.9),
       rgba(252, 225, 138, 0.9)), url(../images/BG@2x.png), center;
@@ -163,14 +163,14 @@ li:hover::after {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: $text-hover-color;
 
 }
 
 .welcome,
 .template {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: $text-hover-color;
 }
 
 .welcome {
@@ -198,7 +198,7 @@ li:hover::after {
   line-height: 2.5;
   display: block;
   font-size: 12px;
-  border: 2px solid white;
+  border: 2px solid $text-hover-color;
 }
 
 .services {
@@ -206,7 +206,7 @@ li:hover::after {
 
   .amazing {
     @extend %headline-font;
-    color: rgb(0, 0, 0);
+    color: $text-section2-color;
     font-weight: bold;
     font-size: 30px;
     margin: auto;
@@ -253,7 +253,7 @@ li:hover::after {
   font-size: 24px;
   font-weight: 300;
   width: 42%;
-  margin: auto;
+ 
   margin: 0 auto 23px auto;
 }
 
@@ -261,7 +261,7 @@ li:hover::after {
   content: "";
   width: 25%;
   height: 4px;
-  background-color: $after-color;
+  background-color: $main-color-1;
   display: block;
   margin: 0 auto;
   margin-top: 43px;
@@ -273,8 +273,9 @@ li:hover::after {
 .icon-book-open,
 .icon-home3,
 .icon-checkbox-unchecked {
-  fill: #95e1d3;
-  @extend %icon-size;
+  fill: $main-color-3;
+  width: 30px;
+  height: 30px;
   display: inline;
   position: absolute;
   left: 0;
@@ -285,19 +286,20 @@ li:hover::after {
 .icon-instagram,
 .icon-twitter,
 .icon-pinterest-p {
-  @extend %icon-size;
-  fill: #f38181
+  width: 30px;
+  height: 30px;
+  fill: $main-color-1;
 }
 
 .description {
   @extend %headline-font;
-  color: rgb(0, 0, 0);
+  color: $text-section2-color;
   font-weight: 400;
   margin-bottom: 20px;
 }
 
 .details {
-  color: #999999;
+  color: $secondary_text-section2;
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
 }
@@ -313,7 +315,7 @@ li:hover::after {
   margin-bottom: 85px;
 
   .meet_us {
-    font-family: 'Montserrat', sans-serif;
+    @extend %headline-font;
     font-weight: bold;
     font-size: 30px;
     width: 23%;
@@ -324,7 +326,7 @@ li:hover::after {
 
   .lil_descrip {
     color: #999999;
-    font-family: 'Roboto', sans-serif;
+    font-family: $description-text;
     font-weight: 200;
     display: block;
     width: 60%;
@@ -336,8 +338,8 @@ li:hover::after {
 
 
 .meet_us::before {
-  content: "We work with";
-  font-family: "Kaushan Script", cursive;
+  content: "Who we are";
+  @extend %pretty-font;
   display: block;
   font-size: 24px;
   font-weight: 300;
@@ -350,7 +352,7 @@ li:hover::after {
   content: "";
   width: 21%;
   height: 4px;
-  background-color: $after-color;
+  background-color: $main-color-1;
   display: block;
   margin: 0 auto;
   margin-top: 43px;
@@ -416,14 +418,14 @@ li:hover::after {
 
 .guy_name {
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  @extend %headline-font;
   font-weight: 400;
 }
 
 .proffesion {
-  font-family: 'Roboto', sans-serif;
+  font-family: $description-text;
   font-style: italic;
-  color: #999999;
+  color: $secondary_text-section2;
   font-weight: 200;
 }
 
@@ -459,7 +461,7 @@ li:hover::after {
     display: inline-block;
     width: 55px;
     height: 55px;
-    background-color: #fce38a;
+    background-color: $main-color-2;
     position: relative;
     margin-left: -3px;
   }
@@ -468,17 +470,13 @@ li:hover::after {
 
 .twit,
 .pint,
-.insta {
+.insta,
+.fb  {
   position: absolute;
   top: 25%;
   left: 25%;
 }
 
-.fb {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-}
 
 .guy_name,
 .proffesion {
@@ -522,7 +520,7 @@ input,
 /*hoover*/
 
 .menu_items:hover {
-  color: $hover-social;
+  color: $main-color-1;
 }
 
 .menu_items:hover::after {
@@ -530,15 +528,15 @@ input,
   width: 100%;
   height: 2px;
   display: block;
-  background-color: $hover-social;
+  background-color: $main-color-1;
 
 }
 
 .hover1:hover {
   opacity: 1;
-  -webkit-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
-  -moz-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
-  box-shadow: 15px 14px 0px 0px rgba(149, 225, 211, 1);
+  -webkit-box-shadow: 17px 14px 0px 0px $main-color-3;
+  -moz-box-shadow: 17px 14px 0px 0px $main-color-3;
+  box-shadow: 15px 14px 0px 0px $main-color-3;
   -webkit-transform: translate(-15px, -14px);
   transform: translate(-15px, -14px);
   -webkit-transition: all 0.3s ease;
@@ -552,9 +550,9 @@ input,
 
 .hover2:hover {
   opacity: 1;
-  -webkit-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
-  -moz-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
-  box-shadow: 15px 14px 0px 0px rgba(149, 225, 211, 1);
+  -webkit-box-shadow: 17px 14px 0px 0px $main-color-3;
+  -moz-box-shadow: 17px 14px 0px 0px $main-color-3;
+  box-shadow: 15px 14px 0px 0px $main-color-3;
   -webkit-transform: translate(-15px, -14px);
   transform: translate(-15px, -14px);
   -webkit-transition: all 0.3s ease;
@@ -568,9 +566,9 @@ input,
 
 .hover3:hover {
   opacity: 1;
-  -webkit-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
-  -moz-box-shadow: 17px 14px 0px 0px rgba(149, 225, 211, 1);
-  box-shadow: 15px 14px 0px 0px rgba(149, 225, 211, 1);
+  -webkit-box-shadow: 17px 14px 0px 0px $main-color-3;
+  -moz-box-shadow: 17px 14px 0px 0px $main-color-3;
+  box-shadow: 15px 14px 0px 0px $main-color-3;
   -webkit-transform: translate(-15px, -14px);
   transform: translate(-15px, -14px);
   -webkit-transition: all 0.3s ease;
@@ -583,11 +581,11 @@ input,
 }
 
 .soc-icons-wraper:hover {
-  background-color: rgb(243, 129, 129);
+  background-color: $main-color-1;
 }
 
 a>svg:hover {
-  fill: white;
+  fill: $text-section1-color;
 }
 
 footer {
@@ -601,7 +599,7 @@ footer {
   box-shadow: 2px -14px 1px -13px rgba(0, 0, 0, 0.2);
 
   .legal_info {
-    font-family: 'Montserrat', sans-serif;
+    @extend %headline-font;
     line-height: 50px;
   }
 
@@ -611,7 +609,7 @@ footer {
     display: inline;
     border: none;
     margin-left: -5px;
-    background-color: #95e1d3;
+    background-color: $main-color-3;
     @extend %headline-font;
     font-weight: bold;
     cursor: pointer;
@@ -620,14 +618,14 @@ footer {
   input[type=text] {
     width: 230px;
     padding: 13px;
-    font-family: 'Roboto', sans-serif;
+    font-family: $description-text;
     font-style: italic;
     font-weight: 200;
   }
 }
 
 span {
-  color: #f38181;
+  color: $main-color-1;
 }
 
 footer {
