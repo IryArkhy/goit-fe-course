@@ -1,0 +1,61 @@
+.first {
+  width: 100%;
+  height: auto;
+  background: $main-gradient, url(../images/BGpng-min.png), center;
+  background-size: cover;
+  padding-bottom: 10rem;
+  margin-bottom: 3rem;
+
+  header {
+    padding-top: 30px;
+    margin-bottom: 6rem;
+    padding-right: 14rem;
+
+    .menu {
+      display: flex;
+      list-style-type: none;
+      justify-content: flex-end;
+      position: relative;
+
+      .logo {
+        position: absolute;
+        left: 20%;
+        top: -5px;
+        @extend %headline-font;
+        font-weight: 900;
+        font-size: 20px;
+      }
+
+      li {
+        margin: 0 1rem;
+        line-height: 2;
+        vertical-align: -10px;
+
+        a {
+          @extend %headline-font;
+          font-size: 10px;
+          font-weight: 600;
+
+        }
+
+        .icon-cart,
+        .icon-search {
+          width: 12px;
+          height: 12px;
+          fill: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
+}

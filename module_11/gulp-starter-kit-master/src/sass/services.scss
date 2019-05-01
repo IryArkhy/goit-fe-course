@@ -1,0 +1,80 @@
+.services {
+  margin: 0 0 0 0;
+
+  .amazing {
+    @extend %headline-font;
+    color: $text-section2-color;
+    font-weight: bold;
+    font-size: 30px;
+    margin: auto;
+    width: 30%;
+    text-align: center;
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  .wraper1 {
+    display: flex;
+    justify-content: right;
+    width: 75%;
+    flex-flow: wrap;
+    margin: auto;
+
+    .icons {
+      width: 300px;
+      position: relative;
+      padding-left: 50px;
+      margin-left: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.wraper1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+  width: 75%;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  margin: auto;
+}
+
+.amazing::before {
+  content: "We work with";
+  @extend %pretty-font;
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  width: 42%;
+
+  margin: 0 auto 23px auto;
+}
+
+.amazing::after {
+  content: "";
+  width: 25%;
+  height: 4px;
+  background-color: $main-color-1;
+  display: block;
+  margin: 0 auto;
+  margin-top: 43px;
+}
+
+.icon-alarm,
+.icon-stats-dots,
+.icon-computer-desktop,
+.icon-book-open,
+.icon-home3,
+.icon-checkbox-unchecked {
+  fill: $main-color-3;
+  width: 30px;
+  height: 30px;
+  display: inline;
+  position: absolute;
+  left: 0;
+  top: 10%;
+}

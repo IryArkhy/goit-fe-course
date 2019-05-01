@@ -1,0 +1,18 @@
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .first {
+    background: -webkit-gradient(linear,
+      left top, left bottom,
+      from($main-color-1),
+      to(rgba(252, 225, 138, 0.9))), url(../images/BG@2x.png), center;
+    background: -webkit-linear-gradient(rgba(245, 123, 112, 0.9),
+      rgba(252, 225, 138, 0.9)), url(../images/BG@2x.png), center;
+    background: -o-linear-gradient(rgba(245, 123, 112, 0.9),
+      rgba(252, 225, 138, 0.9)), url(../images/BG@2x.png), center;
+    background: linear-gradient(rgba(245, 123, 112, 0.9),
+      rgba(252, 225, 138, 0.9)), url(../images/BG@2x.png), center;
+    background-size: cover;
+    padding-bottom: 10rem;
+    margin-bottom: 3rem;
+  }
+}

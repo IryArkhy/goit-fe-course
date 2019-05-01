@@ -1,0 +1,53 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 10px 0 0 0;
+  -webkit-box-shadow: 2px -14px 1px -12px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px -14px 1px -12px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px -14px 1px -13px rgba(0, 0, 0, 0.2);
+
+  .legal_info {
+    @extend %headline-font;
+    line-height: 50px;
+  }
+
+  input[type=submit] {
+    width: 150px;
+    padding: 14px 16px;
+    display: inline;
+    border: none;
+    margin-left: -5px;
+    background-color: $main-color-3;
+    @extend %headline-font;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  input[type=text] {
+    width: 230px;
+    padding: 13px;
+    font-family: $description-text;
+    font-style: italic;
+    font-weight: 200;
+  }
+}
+
+span {
+  color: $main-color-1;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 10px 0 0 0;
+  -webkit-box-shadow: 2px -14px 1px -12px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px -14px 1px -13px rgba(0, 0, 0, 0.2);
+}

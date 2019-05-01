@@ -1,0 +1,55 @@
+.hover1:hover {
+  opacity: 1;
+  -webkit-box-shadow: 17px 14px 0px 0px $main-color-3;
+  -moz-box-shadow: 17px 14px 0px 0px $main-color-3;
+  box-shadow: 15px 14px 0px 0px $main-color-3;
+  -webkit-transform: translate(-15px, -14px);
+  transform: translate(-15px, -14px);
+  -webkit-transition: all 0.3s ease;
+  ;
+  -moz-transition: all 0.3s ease;
+  ;
+  -o-transition: all 0.3s ease;
+  ;
+  transition: all 0.3s ease;
+}
+
+.hover2:hover {
+  opacity: 1;
+  -webkit-box-shadow: 17px 14px 0px 0px $main-color-3;
+  -moz-box-shadow: 17px 14px 0px 0px $main-color-3;
+  box-shadow: 15px 14px 0px 0px $main-color-3;
+  -webkit-transform: translate(-15px, -14px);
+  transform: translate(-15px, -14px);
+  -webkit-transition: all 0.3s ease;
+  ;
+  -moz-transition: all 0.3s ease;
+  ;
+  -o-transition: all 0.3s ease;
+  ;
+  transition: all 0.3s ease;
+}
+
+.hover3:hover {
+  opacity: 1;
+  -webkit-box-shadow: 17px 14px 0px 0px $main-color-3;
+  -moz-box-shadow: 17px 14px 0px 0px $main-color-3;
+  box-shadow: 15px 14px 0px 0px $main-color-3;
+  -webkit-transform: translate(-15px, -14px);
+  transform: translate(-15px, -14px);
+  -webkit-transition: all 0.3s ease;
+  ;
+  -moz-transition: all 0.3s ease;
+  ;
+  -o-transition: all 0.3s ease;
+  ;
+  transition: all 0.3s ease;
+}
+
+.soc-icons-wraper:hover {
+  background-color: $main-color-1;
+}
+
+a>svg:hover {
+  fill: $text-section1-color;
+}

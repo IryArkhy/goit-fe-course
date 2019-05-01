@@ -1,0 +1,33 @@
+.welcome,
+.template {
+  text-align: center;
+  color: $text-hover-color;
+}
+
+.welcome {
+  @extend %headline-font;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 1;
+}
+
+.template {
+  @extend %pretty-font;
+  margin-bottom: 1.8rem;
+}
+
+.w2 {
+  margin-bottom: 5.5rem;
+}
+
+.more {
+  @extend %headline-font;
+  font-weight: 600;
+  margin: auto;
+  width: 7.5rem;
+  text-align: center;
+  line-height: 2.5;
+  display: block;
+  font-size: 12px;
+  border: 2px solid $text-hover-color;
+}
