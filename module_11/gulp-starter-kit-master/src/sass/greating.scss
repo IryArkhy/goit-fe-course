@@ -1,7 +1,7 @@
 .welcome,
 .template {
   text-align: center;
-  color: $text-hover-color;
+  color: $text-section1-color;
 }
 
 .welcome {
@@ -29,5 +29,6 @@
   line-height: 2.5;
   display: block;
   font-size: 12px;
-  border: 2px solid $text-hover-color;
+  border: 2px solid $text-section1-color;
+  color: $text-section1-color;
 }

@@ -11,38 +11,44 @@
     margin-bottom: 6rem;
     padding-right: 14rem;
 
-    .menu {
-      display: flex;
-      list-style-type: none;
-      justify-content: flex-end;
-      position: relative;
+    nav {
+      height: 50px;
 
-      .logo {
-        position: absolute;
-        left: 20%;
-        top: -5px;
-        @extend %headline-font;
-        font-weight: 900;
-        font-size: 20px;
-      }
+      .menu {
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        position: relative;
+        color: $text-section1-color;
 
-      li {
-        margin: 0 1rem;
-        line-height: 2;
-        vertical-align: -10px;
-
-        a {
+        .logo {
+          position: absolute;
+          left: 20%;
+          top: -5px;
           @extend %headline-font;
-          font-size: 10px;
-          font-weight: 600;
-
+          font-weight: 900;
+          font-size: 20px;
         }
 
-        .icon-cart,
-        .icon-search {
-          width: 12px;
-          height: 12px;
-          fill: rgb(255, 255, 255);
+        li {
+          margin: 0 1rem;
+          line-height: 2;
+          vertical-align: -10px;
+
+          a {
+            @extend %headline-font;
+            font-size: 10px;
+            font-weight: 600;
+            color: $text-section1-color;
+
+          }
+
+          .icon-cart,
+          .icon-search {
+            width: 12px;
+            height: 12px;
+            fill: rgb(255, 255, 255);
+          }
         }
       }
     }

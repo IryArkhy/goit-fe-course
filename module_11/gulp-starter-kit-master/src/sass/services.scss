@@ -78,3 +78,17 @@
   left: 0;
   top: 10%;
 }
+
+.description {
+  @extend %headline-font;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.details {
+  color: $secondary_text-section2;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+}

@@ -102,6 +102,7 @@
 .guy_name {
   text-transform: uppercase;
   @extend %headline-font;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -158,8 +159,14 @@
   position: absolute;
   top: 25%;
   left: 25%;
+
 }
 
+svg {
+  width: 30px;
+  height: 30px;
+  fill: $main-color-1;
+}
 
 .guy_name,
 .proffesion {
@@ -170,28 +177,28 @@
 
 .hover2 {
   background: -webkit-gradient(linear,
-    left top, left bottom,
-    from(rgba(238, 118, 120, 0.9)),
-    to(rgba(238, 216, 135, 0.9))), url(../images/photo_guy-min.png);
+      left top, left bottom,
+      from(rgba(238, 118, 120, 0.9)),
+      to(rgba(238, 216, 135, 0.9))), url(../images/photo_guy-min.png);
   background: -webkit-linear-gradient(rgba(238, 118, 120, 0.9),
-    rgba(238, 216, 135, 0.9)), url(../images/photo_guy-min.png);
+      rgba(238, 216, 135, 0.9)), url(../images/photo_guy-min.png);
   background: -o-linear-gradient(rgba(238, 118, 120, 0.9),
-    rgba(238, 216, 135, 0.9)), url(../images/photo_guy-min.png);
+      rgba(238, 216, 135, 0.9)), url(../images/photo_guy-min.png);
   background: linear-gradient(rgba(238, 118, 120, 0.9),
-    rgba(238, 216, 135, 0.9)), url(../images/photo_guy-min.png);
+      rgba(238, 216, 135, 0.9)), url(../images/photo_guy-min.png);
 }
 
 .hover3 {
   background: -webkit-gradient(linear,
-    left top, left bottom,
-    from(rgba(238, 118, 120, 0.9)),
-    to(rgba(238, 216, 135, 0.9))), url(../images/third_guy-min.png);
+      left top, left bottom,
+      from(rgba(238, 118, 120, 0.9)),
+      to(rgba(238, 216, 135, 0.9))), url(../images/third_guy-min.png);
   background: -webkit-linear-gradient(rgba(238, 118, 120, 0.9),
-    rgba(238, 216, 135, 0.9)), url(../images/third_guy-min.png);
+      rgba(238, 216, 135, 0.9)), url(../images/third_guy-min.png);
   background: -o-linear-gradient(rgba(238, 118, 120, 0.9),
-    rgba(238, 216, 135, 0.9)), url(../images/third_guy-min.png);
+      rgba(238, 216, 135, 0.9)), url(../images/third_guy-min.png);
   background: linear-gradient(rgba(238, 118, 120, 0.9),
-    rgba(238, 216, 135, 0.9)), url(../images/third_guy-min.png);
+      rgba(238, 216, 135, 0.9)), url(../images/third_guy-min.png);
 }
 
 input,
