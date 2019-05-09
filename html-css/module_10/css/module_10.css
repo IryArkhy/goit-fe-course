@@ -229,8 +229,12 @@ a {
 li {
 
     margin: 0 1rem;
-    line-height: 2;
+    line-height: 1;
     vertical-align: -10px;
+}
+
+nav {
+    height: 50px;
 }
 
 li:hover::after {
