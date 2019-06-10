@@ -5,14 +5,16 @@
 // const ADMIN_PASSWORD = 'm4ng0h4ckz';
 // let enter = prompt('Введите пароль');
 
-// if (enter === null) {
-//     message = 'Отменено пользователем!';
-//     alert(message);
-// } else if (enter === ADMIN_PASSWORD) {
-//     message = 'Добро пожаловать!';
-//     alert(message);
-// } else if (enter !== ADMIN_PASSWORD ) {
+// if (enter !== null) {
+//     if (enter === ADMIN_PASSWORD) {
+//         message = 'Добро пожаловать!';
+//         alert(message);
+// } else {
 //     message = 'Доступ запрещен, неверный пароль!';
+//     alert(message);
+// } 
+// } else {
+//     message = 'Отменено пользователем!';
 //     alert(message);
 // }
 
@@ -28,18 +30,19 @@
 // const totalPrice = enter * pricePerDroid;
 // let leftover = credits - totalPrice;
 
-// if (enter === null) {
-//     message = 'Отменено пользователем!';
-//     console.log(message);
-// } else if (enter = Number && totalPrice <= credits) {
+// if (enter !== null) {
+//  if (enter = Number && totalPrice <= credits) {
 //     message = `Вы купили ${quantity} дроидов, на счету осталось ${leftover} кредитов.`
 //     console.log(message);
-// }  
-
-// if (totalPrice > credits) {
+// }  else if (totalPrice > credits) {
 //     message = 'Недостаточно средств на счету!'
 //     console.log(message);
+// } } else {
+// message = 'Отменено пользователем!';
+// console.log(message);
 // }
+
+
 
 
 
@@ -48,47 +51,44 @@
 
 
 // const country = prompt('Введите страну для доставки...', '');
+// let message;
 
-// if (country) {
+// if (country !== null) {
 //     const chosenCountry = country.toLowerCase();
 //     let price;
 //     switch (chosenCountry) {
 //         case 'китай':
 //             price = 100;
+//             message = `Доставка в ${chosenCountry} будет стоить ${price} кредитов`
 //             break;
 
 //         case 'южная америка':
 //             price = 250;
+//             message = `Доставка в ${chosenCountry} будет стоить ${price} кредитов`
 //             break;
 
 //         case 'австралия':
 //             price = 170;
+//             message = `Доставка в ${chosenCountry} будет стоить ${price} кредитов`
 //             break;
 
 //         case 'индия':
 //             price = 80;
+//             message = `Доставка в ${chosenCountry} будет стоить ${price} кредитов`
 //             break;
 
 //         case 'ямайка':
 //             price = 120;
+//             message = `Доставка в ${chosenCountry} будет стоить ${price} кредитов`
 //             break;
+//         default :
+//         message = `В вашей стране доставка не доступна`;
+//     alert(message)
+//     break;
 //     }
-
-//     let messageDeliveryConfirm = `Доставка в ${chosenCountry} будет стоить ${price} кредитов`;
-//     let messageDeliveryDeclined = `В вашей стране доставка не доступна`;
-
-
-//     if (chosenCountry === 'китай') {
-//         console.log(messageDeliveryConfirm);
-//     } else if (chosenCountry === 'южная америка') {
-//         console.log(messageDeliveryConfirm);
-//     } else if (chosenCountry === 'австралия') {
-//         console.log(messageDeliveryConfirm);
-//     } else if (chosenCountry === 'индия') {
-//         console.log(messageDeliveryConfirm);
-//     } else if (chosenCountry === 'ямайка') {
-//         console.log(messageDeliveryConfirm);
-//     } else {
-//         console.log(messageDeliveryDeclined);
-//     }
+//     alert(message)
+// } else  {
+//     const CANCEL = `Try again`;
+//     console.log(CANCEL);
 // }
+
