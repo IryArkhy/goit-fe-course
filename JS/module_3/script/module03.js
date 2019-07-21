@@ -44,20 +44,20 @@ const isLoginUnique = (allLogins, login) => {
 
 
   const addLogin = function(allLogins, login) {
-    const validCheck = isLoginValid(login);
-    const uniquenessCheck = isLoginUnique(allLogins,login);
-    let message = 'Логин успешно добавлен!';
+    let message = 'Ошибка! Логин должен быть от 4 до 16 символов';
 
-    if (validCheck === false) {
-      message = 'Ошибка! Логин должен быть от 4 до 16 символов'
-      return console.log(message);
-    } else if (uniquenessCheck === false) {
-      message = 'Такой логин уже используется!';
-      return console.log(message);
-    } else {
-      allLogins.push(login);
-      return console.log(message);
+    if (isLoginValid(login)) {
+      if(isLoginUnique(allLogins,login)) {
+        allLogins.push(login);
+        message = 'Логин успешно добавлен!';
+       return console.log(message);
+      } else {
+        message = 'Такой логин уже используется!';
+       return console.log(message);
+      }
     }
+    
+    return console.log(message);
 
   };
 
