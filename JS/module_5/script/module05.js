@@ -3,7 +3,7 @@
 const Notepad = function Notepad(notes = []) {
     this.notes = notes;
     this.getNotes = function () {
-        return notepad.notes;
+        return this.notes;
     };
     this.findNoteById = function (id) { //Works
         for (let note of this.notes) {
