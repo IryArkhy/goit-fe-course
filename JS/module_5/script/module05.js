@@ -6,21 +6,21 @@ const Notepad = function Notepad(notes = []) {
         return notepad.notes;
     };
     this.findNoteById = function (id) { //Works
-        for (let note of notepad.notes) {
+        for (let note of this.notes) {
             if (note.id === id) return note;
         }
 
 
     };
     this.saveNote = function (note) { //Works
-        notepad.notes.push(note);
+        this.notes.push(note);
         return note;
     };
     this.deleteNote = function (id) { //Works
-        for (let note of notepad.notes) {
+        for (let note of this.notes) {
             if (note.id === id) {
-                let indexOfNote = notepad.notes.indexOf(note);
-                notepad.notes.splice(indexOfNote, 1);
+                let indexOfNote = this.notes.indexOf(note);
+                this.notes.splice(indexOfNote, 1);
             }
         }
 
@@ -29,14 +29,14 @@ const Notepad = function Notepad(notes = []) {
 
         let newNote = {};
         let indexOfNewNote;
-        for (let note of notepad.notes) {
+        for (let note of this.notes) {
             if (note.id === id) {
-                indexOfNewNote = notepad.notes.indexOf(note);
+                indexOfNewNote = this.notes.indexOf(note);
                 newNote = {
                     ...note,
                     ...updatedContent
                 };
-                notepad.notes[indexOfNewNote] = newNote;
+                this.notes[indexOfNewNote] = newNote;
             }
         }
         return newNote;
@@ -45,7 +45,7 @@ const Notepad = function Notepad(notes = []) {
     };
     this.updateNotePriority = function (id, priority) { //Works
         let newNote = {};
-        for (let note of notepad.notes) {
+        for (let note of this.notes) {
             if (note.id === id) {
                 note.priority = priority;
                 newNote = note;
@@ -56,11 +56,10 @@ const Notepad = function Notepad(notes = []) {
     };
     this.filterNotesByQuery = function (query) { //Works
         let listOfNotes = [];
-        for (let note of notepad.notes) {
-            let reshapedTitle = note.title.toLowerCase();
-            let reshapedBody = note.body.toLowerCase();
-            if (reshapedTitle.includes(query) || reshapedBody.includes(query)) {
-                listOfNotes.push(note)
+        for (let note of this.notes) {
+            const hasQuery = `${note.title} ${note.body}`.toLowerCase().includes(query.toLowerCase());
+            if (hasQuery) {
+                listOfNotes.push(note);
             }
         }
         return listOfNotes;
@@ -69,7 +68,7 @@ const Notepad = function Notepad(notes = []) {
     };
     this.filterNotesByPriority = function (priority) { //Works
         let listOfNotes = [];
-        for (let note of notepad.notes) {
+        for (let note of this.notes) {
             if (note.priority === priority) {
                 listOfNotes.push(note)
             }
