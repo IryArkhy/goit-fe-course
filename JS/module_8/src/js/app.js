@@ -164,93 +164,129 @@ const createTag = ({
 };
 
 
-
 const createListItem = (note) => {
-  const noteCard = createTag({
-    tag: 'li',
-    className: 'note-list__item',
-    id: note.id,
-  });
+  const tagsToCreate = {
+    noteCard: {
+      tag: 'li',
+      className: 'note-list__item',
+      id: note.id,
+    },
+    noteWrapper: {
+      tag: 'div',
+      className: 'note'
+    },
 
 
-  const noteWrapper = createTag({
-    tag: 'div',
-    className: 'note'
-  });
-
-  const createNoteContent = () => {
-    const noteContent = createTag({
+    noteContent: {
       tag: 'div',
       className: 'note__content'
-    });
-
-
-    const noteTitle = createTag({
+    },
+    noteTitle: {
       tag: 'h2',
       className: 'note__title',
       text: note.title,
-    });
-
-
-    const noteBody = createTag({
+    },
+    noteBody: {
       tag: 'p',
       className: 'note__body',
       text: note.body
-    });
+    },
+
+
+    footer: {
+      tag: 'footer',
+      className: 'note__footer'
+    },
+
+    footerSection1: {
+      tag: 'section',
+      className: 'note__section'
+    },
+    buttonDecreasePriority: {
+      tag: 'button',
+      className: 'action',
+      dataSetAction: NOTE_ACTIONS.DECREASE_PRIORITY,
+    },
+    iconArrowDown: {
+      tag: 'i',
+      className: 'material-icons',
+      text: ICON_TYPES.ARROW_DOWN,
+    },
+    buttonIncreasePriority: {
+      tag: 'button',
+      className: 'action',
+      dataSetAction: NOTE_ACTIONS.INCREASE_PRIORITY,
+    },
+    iconArrowUp: {
+      tag: 'i',
+      className: 'material-icons',
+      text: ICON_TYPES.ARROW_UP,
+    },
+    priority: {
+      tag: 'span',
+      className: 'note__priority',
+      text: `Priority:  ${note.priority}`
+    },
+
+    footerSection2: {
+      tag: 'section',
+      className: 'note__section'
+    },
+    buttonEdit: {
+      tag: 'button',
+      className: 'action',
+      dataSetAction: NOTE_ACTIONS.EDIT,
+    },
+    iconEdit: {
+      tag: 'i',
+      className: 'material-icons',
+      text: ICON_TYPES.EDIT,
+    },
+    buttonDelete: {
+      tag: 'button',
+      className: 'action',
+      dataSetAction: NOTE_ACTIONS.DELETE,
+    },
+    iconDelete: {
+      tag: 'i',
+      className: 'material-icons',
+      text: ICON_TYPES.DELETE,
+    },
+
+  }
+
+  const noteCard = createTag(tagsToCreate.noteCard);
+
+
+  const noteWrapper = createTag(tagsToCreate.noteWrapper);
+
+  const createNoteContent = () => {
+    const noteContent = createTag(tagsToCreate.noteContent);
+    const noteTitle = createTag(tagsToCreate.noteTitle);
+    const noteBody = createTag(tagsToCreate.noteBody);
 
     noteContent.append(noteTitle, noteBody);
     return noteContent;
   }
- 
 
 
   const createNoteFooter = () => {
-    const footer = createTag({
-      tag: 'footer',
-      className: 'note__footer'
-    });
+    const footer = createTag(tagsToCreate.footer);
 
 
     const createNoteFooterSection1 = () => {
-      const section = createTag({
-        tag: 'section',
-        className: 'note__section'
-      });
+      const section = createTag(tagsToCreate.footerSection1);
 
-      const buttonDecreasePriority = createTag({
-        tag: 'button',
-        className: 'action',
-        dataSetAction: NOTE_ACTIONS.DECREASE_PRIORITY,
-      });
-
-
-      const iconArrowDown = createTag({
-        tag: 'i',
-        className: 'material-icons',
-        text: ICON_TYPES.ARROW_DOWN,
-      });
+      const buttonDecreasePriority = createTag(tagsToCreate.buttonDecreasePriority);
+      const iconArrowDown = createTag(tagsToCreate.iconArrowDown);
       iconArrowDown.classList.add('action__icon');
 
 
-      const buttonIncreasePriority = createTag({
-        tag: 'button',
-        className: 'action',
-        dataSetAction: NOTE_ACTIONS.INCREASE_PRIORITY,
-      });
-
-      const iconArrowUp = createTag({
-        tag: 'i',
-        className: 'material-icons',
-        text: ICON_TYPES.ARROW_UP,
-      });
+      const buttonIncreasePriority = createTag(tagsToCreate.buttonIncreasePriority);
+      const iconArrowUp = createTag(tagsToCreate.iconArrowUp);
       iconArrowUp.classList.add('action__icon');
 
-
-      const priority = createTag({
-        tag: 'span',
-        className: 'note__priority',
-        text: `Priority:  ${note.priority}`
-      });
+      const priority = createTag(tagsToCreate.priority);
 
 
       buttonDecreasePriority.append(iconArrowDown);
@@ -261,38 +297,15 @@ const createListItem = (note) => {
     }
 
     const createNoteFooterSection2 = () => {
-      const section = createTag({
-        tag: 'section',
-        className: 'note__section'
-      });
+      const section = createTag(tagsToCreate.footerSection2);
 
-      const buttonEdit = createTag({
-        tag: 'button',
-        className: 'action',
-        dataSetAction: NOTE_ACTIONS.EDIT,
-      });
-
-
-      const iconEdit = createTag({
-        tag: 'i',
-        className: 'material-icons',
-        text: ICON_TYPES.EDIT,
-      });
+      const buttonEdit = createTag(tagsToCreate.buttonEdit);
+      const iconEdit = createTag(tagsToCreate.iconEdit);
       iconEdit.classList.add('action__icon');
 
 
-      const buttonDelete = createTag({
-        tag: 'button',
-        className: 'action',
-        dataSetAction: NOTE_ACTIONS.DELETE,
-      });
-
-
-      const iconDelete = createTag({
-        tag: 'i',
-        className: 'material-icons',
-        text: ICON_TYPES.DELETE,
-      });
+      const buttonDelete = createTag(tagsToCreate.buttonDelete);
+      const iconDelete = createTag(tagsToCreate.iconDelete);
       iconDelete.classList.add('action__icon');
 
 
@@ -320,120 +333,6 @@ const createListItem = (note) => {
   return noteCard;
 }
 
-
-
-// Second variant
-
-/*
-const createListItem = (note) => {
-
-  const noteCard = document.createElement('li');
-  noteCard.classList.add('note-list__item');
-  noteCard.dataset.id = note.id;
-
-  const noteWrapper = document.createElement('div');
-  noteWrapper.classList.add('note');
-
-
-  const createNoteContent = () => {
-    const noteContent = document.createElement('div');
-    noteContent.classList.add('note__content');
-
-    const noteTitle = document.createElement('h2');
-    noteTitle.classList.add('note__title');
-    noteTitle.textContent = note['title'];
-
-    const noteBody = document.createElement('p');
-    noteBody.classList.add('note__body');
-    noteBody.textContent = note['body'];
-    
-
-    noteContent.append(noteTitle, noteBody);
-    return noteContent;
-  }
-
-  const noteContent = createNoteContent();
- 
-
-  const createNoteFooter = () => {
-    const footer = document.createElement('footer');
-    footer.classList.add('note__footer');
-
-    const createNoteFooterSection1 = () => {
-      const section = document.createElement('section');
-      section.classList.add('note__section');
-
-      const buttonDecreasePriority = document.createElement('button');
-      buttonDecreasePriority.classList.add('action');
-      buttonDecreasePriority.dataset.action = NOTE_ACTIONS.DECREASE_PRIORITY;
-
-      const iconArrowDown = document.createElement('i');
-      iconArrowDown.classList.add('material-icons', 'action__icon');
-      iconArrowDown.textContent = ICON_TYPES.ARROW_DOWN;
-
-      const buttonIncreasePriority = document.createElement('button');
-      buttonIncreasePriority.classList.add('action');
-      buttonIncreasePriority.dataset.action = NOTE_ACTIONS.INCREASE_PRIORITY;
-
-      const iconArrowUp = document.createElement('i');
-      iconArrowUp.classList.add('material-icons', 'action__icon');
-      iconArrowUp.textContent = ICON_TYPES.ARROW_UP;
-
-      const priority = document.createElement('span');
-      priority.classList.add('note__priority');
-      priority.textContent = `Priority: ${note.priority}`;
-
-      buttonDecreasePriority.append(iconArrowDown);
-      buttonIncreasePriority.append(iconArrowUp);
-      section.append(buttonDecreasePriority, buttonIncreasePriority,priority)
-
-      return section;
-    }
-
-    const firstSection = createNoteFooterSection1()
-
-    const createNoteFooterSection2 = () => {
-      const section = document.createElement('section');
-      section.classList.add('note__section');
-
-      const buttonEdit = document.createElement('button');
-      buttonEdit.classList.add('action');
-      buttonEdit.dataset.action = NOTE_ACTIONS.EDIT;
-
-      const iconEdit = document.createElement('i');
-      iconEdit.classList.add('material-icons', 'action__icon');
-      iconEdit.textContent = ICON_TYPES.EDIT;
-
-      const buttonDelete = document.createElement('button');
-      buttonDelete.classList.add('action');
-      buttonDelete.dataset.action = NOTE_ACTIONS.DELETE;
-
-      const iconDelete = document.createElement('i');
-      iconDelete.classList.add('material-icons', 'action__icon');
-      iconDelete.textContent = ICON_TYPES.DELETE;
-
-      buttonEdit.append(iconEdit);
-      buttonDelete.append(iconDelete);
-      section.append(buttonEdit, buttonDelete);
-
-      return section;
-    }
-
-    const secondSection = createNoteFooterSection2();
-
-    footer.append(firstSection, secondSection);
-
-    return footer;
-  }
-
-  const footer = createNoteFooter();
-
-  noteWrapper.append(noteContent, footer);
-  noteCard.append(noteWrapper);
-
-  return noteCard;
-}
-*/
 
 const renderNoteList = (listRef, notes) => {
   const renderList = notes.map(note => createListItem(note));
