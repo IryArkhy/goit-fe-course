@@ -383,4 +383,4 @@ const handleSearchInNotes = (event) => {
 
 ref.formContainer.addEventListener('submit', handleSaveNewNote);
 ref.ul.addEventListener('click', handleDeleteNote);
-ref.searchForm.addEventListener('input', handleSearchInNotes)
+ref.searchForm.addEventListener('input', handleSearchInNotes);
