@@ -1,5 +1,5 @@
-import {NOTE_ACTIONS} from './constants';
-import {ICON_TYPES} from './constants';
+import {NOTE_ACTIONS} from '../Constants/constants';
+import {ICON_TYPES} from '../Constants/constants';
 import {createTag} from './tagGenerator';
 
 export const createListItem = (note) => {

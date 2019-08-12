@@ -1,9 +1,18 @@
 import './sass/main.scss';
-import {ref} from './js/utils/refs';
-import {handleSaveNewNote, handleDeleteNote, handleSearchInNotes} from './js/utils/handlers';
+import './js/utils/References/refs';
+import './js/utils/Constants/constants';
+import './js/utils/Model/NotepadModel';
+import './js/utils/app';
+import './js/utils/NoteGenerator/tagGenerator';
+import './js/utils/NoteGenerator/noteGenerator';
+import './js/utils/Handlers/SaveNote';
+import './js/utils/Handlers/SearchNote';
+import './js/utils/Handlers/DeleteNote';
+import './js/utils/Rendering/view'
 
 
-ref.formContainer.addEventListener('submit', handleSaveNewNote);
-ref.ul.addEventListener('click', handleDeleteNote);
-ref.searchForm.addEventListener('input', handleSearchInNotes);
+
+
+
+
 
