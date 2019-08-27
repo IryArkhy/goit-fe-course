@@ -1,5 +1,5 @@
-import {NOTE_ACTIONS} from '../Constants/constants';
-import {ref} from '../References/refs';
+import {noteActions} from '../constants/constants';
+import {ref} from '../references/refs';
 import {notepad} from '../app';
 
 
@@ -15,7 +15,7 @@ const removeListItem = element => {
     const iParent = target.closest('button');
     const action = iParent.dataset.action;
   
-    if (action === NOTE_ACTIONS.DELETE) removeListItem(target);
+    if (action === noteActions.DELETE) removeListItem(target);
   
   }
 

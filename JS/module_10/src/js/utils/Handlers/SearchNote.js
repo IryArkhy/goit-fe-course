@@ -1,10 +1,11 @@
-import {ref} from '../References/refs';
-import {renderNoteList} from '../Rendering/view';
+import {ref} from '../references/refs';
+import {renderNoteList} from '../rendering/view';
 import {notepad} from '../app';
 
 
-export const handleSearchInNotes = (event) => {
-    const filteredItems = notepad.filterNotesByQuery(event.target.value);
+export const handleSearchInNotes = ({target}) => {
+    
+    const filteredItems = notepad.filterNotesByQuery(target.value);
     renderNoteList(ref.ul, filteredItems);
   }
 

@@ -1,14 +1,14 @@
 import './sass/main.scss';
-import './js/utils/References/refs';
-import './js/utils/Constants/constants';
+import './js/utils/references/refs';
+import './js/utils/constants/constants';
 import './js/utils/Model/NotepadModel';
 import './js/utils/app';
-import './js/utils/NoteGenerator/tagGenerator';
-import './js/utils/NoteGenerator/noteGenerator';
-import './js/utils/Handlers/SaveNote';
-import './js/utils/Handlers/SearchNote';
-import './js/utils/Handlers/DeleteNote';
-import './js/utils/Rendering/view'
+import './js/utils/noteGenerator/tagGenerator';
+import './js/utils/noteGenerator/noteGenerator';
+import './js/utils/handlers/SaveNote';
+import './js/utils/handlers/SearchNote';
+import './js/utils/handlers/DeleteNote';
+import './js/utils/rendering/view'
 
 
 

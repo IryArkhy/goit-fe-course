@@ -1,40 +1,39 @@
-import {NOTE_ACTIONS} from '../Constants/constants';
-import {ICON_TYPES} from '../Constants/constants';
+import {noteActions} from '../constants/constants';
+import {iconTypes} from '../constants/constants';
 import {createTag} from './tagGenerator';
 
 export const createListItem = (note) => {
     const noteCard = createTag({
       tag: 'li',
-      className: 'note-list__item',
+      classesName: 'note-list__item',
       id: note.id,
     });
   
   
     const noteWrapper = createTag({
       tag: 'div',
-      className: 'note'
+      classesName: 'note'
     });
   
     const createNoteContent = () => {
       const noteContent = createTag({
         tag: 'div',
-        className: 'note__content'
+        classesName: 'note__content'
       });
   
   
       const noteTitle = createTag({
         tag: 'h2',
-        className: 'note__title',
+        classesName: 'note__title',
         text: note.title,
       });
   
   
       const noteBody = createTag({
         tag: 'p',
-        className: 'note__body',
+        classesName: 'note__body',
         text: note.body
       });
-  
       noteContent.append(noteTitle, noteBody);
       return noteContent;
     }
@@ -43,48 +42,48 @@ export const createListItem = (note) => {
     const createNoteFooter = () => {
       const footer = createTag({
         tag: 'footer',
-        className: 'note__footer'
+        classesName: 'note__footer'
       });
   
   
       const createNoteFooterSection1 = () => {
         const section = createTag({
           tag: 'section',
-          className: 'note__section'
+          classesName: 'note__section'
         });
   
         const buttonDecreasePriority = createTag({
           tag: 'button',
-          className: 'action',
-          dataSetAction: NOTE_ACTIONS.DECREASE_PRIORITY,
+          classesName: 'action',
+          dataSetAction: noteActions.DECREASE_PRIORITY,
         });
   
   
         const iconArrowDown = createTag({
           tag: 'i',
-          className: 'material-icons',
-          text: ICON_TYPES.ARROW_DOWN,
+          classesName: 'material-icons action__icon',
+          text: iconTypes.ARROW_DOWN,
         });
-        iconArrowDown.classList.add('action__icon');
+     
   
   
         const buttonIncreasePriority = createTag({
           tag: 'button',
-          className: 'action',
-          dataSetAction: NOTE_ACTIONS.INCREASE_PRIORITY,
+          classesName: 'action',
+          dataSetAction: noteActions.INCREASE_PRIORITY,
         });
   
         const iconArrowUp = createTag({
           tag: 'i',
-          className: 'material-icons',
-          text: ICON_TYPES.ARROW_UP,
+          classesName: 'material-icons action__icon',
+          text: iconTypes.ARROW_UP,
         });
-        iconArrowUp.classList.add('action__icon');
+      
   
   
         const priority = createTag({
           tag: 'span',
-          className: 'note__priority',
+          classesName: 'note__priority',
           text: `Priority:  ${note.priority}`
         });
   
@@ -99,37 +98,37 @@ export const createListItem = (note) => {
       const createNoteFooterSection2 = () => {
         const section = createTag({
           tag: 'section',
-          className: 'note__section'
+          classesName: 'note__section'
         });
   
         const buttonEdit = createTag({
           tag: 'button',
-          className: 'action',
-          dataSetAction: NOTE_ACTIONS.EDIT,
+          classesName: 'action',
+          dataSetAction: noteActions.EDIT,
         });
   
   
         const iconEdit = createTag({
           tag: 'i',
-          className: 'material-icons',
-          text: ICON_TYPES.EDIT,
+          classesName: 'material-icons action__icon',
+          text: iconTypes.EDIT,
         });
-        iconEdit.classList.add('action__icon');
+  
   
   
         const buttonDelete = createTag({
           tag: 'button',
-          className: 'action',
-          dataSetAction: NOTE_ACTIONS.DELETE,
+          classesName: 'action',
+          dataSetAction: noteActions.DELETE,
         });
   
   
         const iconDelete = createTag({
           tag: 'i',
-          className: 'material-icons',
-          text: ICON_TYPES.DELETE,
+          classesName: 'material-icons action__icon',
+          text: iconTypes.DELETE,
         });
-        iconDelete.classList.add('action__icon');
+     
   
   
         buttonEdit.append(iconEdit);

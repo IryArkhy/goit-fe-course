@@ -1,6 +1,6 @@
 import {notepad} from '../app';
-import {createListItem} from '../NoteGenerator/noteGenerator';
-import {ref} from '../References/refs';
+import {createListItem} from '../noteGenerator/noteGenerator';
+import {ref} from '../references/refs';
 
 export const renderNoteList = (listRef, notes) => {
     const renderList = notes.map(note => createListItem(note));

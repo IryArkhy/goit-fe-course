@@ -1,7 +1,7 @@
-import {PRIORITY_TYPES} from '../Constants/constants';
-import {ref} from '../References/refs';
+import {priorityTypes} from '../constants/constants';
+import {ref} from '../references/refs';
 import {notepad} from '../app';
-import {addItemToList} from '../Rendering/view';
+import {addItemToList} from '../rendering/view';
 const shortid = require('shortid');
 
 const handleSaveNewNote = event => {
@@ -17,7 +17,7 @@ const handleSaveNewNote = event => {
       id: shortid.generate(),
       title: input.value,
       body: textarea.value,
-      priority: PRIORITY_TYPES.LOW,
+      priority: priorityTypes.LOW,
     };
     
     const createdNote = notepad.saveNote(newItem);

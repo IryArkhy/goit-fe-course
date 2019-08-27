@@ -1,15 +1,21 @@
 export  const createTag = ({
     tag,
-    className,
+    classesName,
     text = '',
-    dataSetAction = '',
-    id = ''
+    dataSetAction,
+    id,
+
   }) => {
     const createdElement = document.createElement(tag);
-    createdElement.classList.add(className);
+    const addClasses = (classes) => classes.split(' ').map(e => createdElement.classList.add(e));
+    addClasses(classesName)
     createdElement.textContent = text;
-    createdElement.dataset.action = dataSetAction;
-    createdElement.dataset.id = id;
+    if (dataSetAction) {
+      createdElement.dataset.action = dataSetAction;
+    }
+    if (id) {
+      createdElement.dataset.id = id;
+    }
     return createdElement;
   
   };

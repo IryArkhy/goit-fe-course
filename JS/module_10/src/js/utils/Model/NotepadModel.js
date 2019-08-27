@@ -15,11 +15,7 @@ export default class Notepad {
     }
   
     findNoteById(id) { 
-      for (let note of this._notes) {
-        if (note.id === id) return note;
-      }
-  
-  
+      return this._notes.find(note => note.id === id);
     };
     saveNote(note) {
       this._notes.push(note);
@@ -28,59 +24,43 @@ export default class Notepad {
     };
   
     deleteNote(id) { 
-      this._notes = this._notes.filter(item => item.id !== id);
-      return this._notes;
+      return  this._notes = this._notes.filter(item => item.id !== id);
   
     };
   
     updateNoteContent(id, updatedContent) { 
   
       let newNote = {};
-      let indexOfNewNote;
-      for (let note of this._notes) {
-        if (note.id === id) {
-          indexOfNewNote = this._notes.indexOf(note);
-          newNote = {
-            ...note,
-            ...updatedContent
-          };
-          this._notes[indexOfNewNote] = newNote;
-        }
-      }
+      const currentNote = this.findNoteById (id);
+      let indexOfNewNote = this._notes.indexOf(currentNote);
+    if (currentNote){
+      newNote = {
+        ...currentNote,
+        ...updatedContent
+      };
+      this._notes[indexOfNewNote] = newNote;
+    }
       return newNote;
   
-  
     };
+
     updateNotePriority(id, priority) { 
       let newNote = {};
-      for (let note of this._notes) {
-        if (note.id === id) {
-          note.priority = priority;
-          newNote = note;
-        }
+      const currentNote = this.findNoteById (id);
+      if (currentNote) {
+        currentNote.priority = priority;
+          newNote = currentNote;
       }
       return newNote;
   
     };
+
     filterNotesByQuery(query = '') { 
-      let listOfNotes = [];
-      for (let note of this._notes) {
-        const hasQuery = `${note.title} ${note.body}`.toLowerCase().includes(query.toLowerCase());
-        if (hasQuery) {
-          listOfNotes.push(note);
-        }
-      }
-      return listOfNotes;
-  
+    return this._notes.filter(note =>  `${note.title} ${note.body}`.toLowerCase().includes(query.toLowerCase()));
     };
+
     filterNotesByPriority(priority) { 
-      let listOfNotes = [];
-      for (let note of this._notes) {
-        if (note.priority === priority) {
-          listOfNotes.push(note)
-        }
-      }
-      return listOfNotes;
+     return this._notes.filter(note => note.priority === priority);
     }
   
   }
