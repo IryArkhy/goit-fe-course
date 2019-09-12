@@ -1,10 +1,6 @@
 import MicroModal from 'micromodal';
-import {priorityTypes, NOTIFICATION_MESSAGES} from '../constants/constants';
-import   "../rendering/view";
 import { Notyf } from "notyf";
-import {ref} from '../references/refs';
-import {notepad} from '../app';
-import {addItemToList} from '../rendering/view';
+import {priorityTypes, NOTIFICATION_MESSAGES, ref, notepad, addItemToList} from '../index';
 import "notyf/notyf.min.css";
 
 

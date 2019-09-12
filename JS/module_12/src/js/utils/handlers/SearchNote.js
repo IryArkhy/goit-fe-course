@@ -1,6 +1,4 @@
-import {ref} from '../references/refs';
-import {renderNoteList} from '../rendering/view';
-import {notepad} from '../app';
+import {ref, renderNoteList, notepad} from '../index';
 
 const handleSearchInNotes = ({target}) => {
     notepad.filterNotesByQuery(target.value)

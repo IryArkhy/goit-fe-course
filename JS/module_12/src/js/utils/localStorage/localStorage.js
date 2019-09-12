@@ -1,4 +1,4 @@
-import initialNotes from "../../../assets/notes.json"
+import {initialNotes} from "../index";
 
 const load = key => {
   try {
