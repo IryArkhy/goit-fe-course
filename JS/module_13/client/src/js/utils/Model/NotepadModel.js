@@ -57,15 +57,16 @@ export default class Notepad {
     };
 
     updateNotePriority(id, priority) { 
-      return api.update(id, priority).then (updatedNote => {
-        this._notes.map(note => {
-            note.id === updatedNote.id ? updatedNote : note;
-        })
-
-        return updatedNote;
+      return api.update(id, priority).then (() => {
+        let newNote = {};
+          const currentNote = this.findNoteById (id);
+          if (currentNote) {
+            currentNote.priority = priority;
+              newNote = currentNote;
+            }
+            return newNote;
     })
-  
-    };
+  };
 
     filterNotesByQuery(query = '') { 
           const filteredNotesByQuery = this._notes.filter(note =>  `${note.title} ${note.body}`.toLowerCase().includes(query.toLowerCase()));
