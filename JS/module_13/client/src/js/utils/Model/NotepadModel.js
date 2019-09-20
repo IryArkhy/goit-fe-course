@@ -41,12 +41,18 @@ export default class Notepad {
     };
   
     updateNoteContent(id, updatedContent) { 
-      return api.update(id, updatedContent).then (updatedNote => {
-        this._notes.map(note => {
-            note.id === updatedNote.id ? updatedNote : note;
-        })
-
-        return updatedNote;
+      return api.update(id, updatedContent).then (() => {
+        let newNote = {};
+            const currentNote = this.findNoteById (id);
+            let indexOfNewNote = this._notes.indexOf(currentNote);
+          if (currentNote){
+            newNote = {
+              ...currentNote,
+              ...updatedContent
+            };
+            this._notes[indexOfNewNote] = newNote;
+          }
+        return newNote;
     })
     };
 
@@ -62,24 +68,14 @@ export default class Notepad {
     };
 
     filterNotesByQuery(query = '') { 
-      return new Promise ((resolve, reject) => {
-        setTimeout(() => {
           const filteredNotesByQuery = this._notes.filter(note =>  `${note.title} ${note.body}`.toLowerCase().includes(query.toLowerCase()));
-          resolve (filteredNotesByQuery);
-          reject("Error");
-        }, 300);
-      })
+        return  filteredNotesByQuery;
+      };
 
-    };
 
     filterNotesByPriority(priority) { 
-      return new Promise ((resolve, reject) => {
-        setTimeout(() => {
-          const filteredNotesByPriority = this._notes.filter(note => note.priority === priority);
-          resolve (filteredNotesByPriority);
-          reject("Error");
-        }, 300);
-      }) 
+      const filteredNotesByPriority = this._notes.filter(note => note.priority === priority);
+     return filteredNotesByPriority;
     }
   }
   
