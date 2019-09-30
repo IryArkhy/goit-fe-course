@@ -50,10 +50,9 @@ export default class Notepad {
   async deleteNote(id) {
     try {
       await api.deleteNote(id);
-      this._notes = await this._notes.filter(item => item.id !== id);
+      this._notes =  this._notes.filter(item => item.id !== id);
       return this._notes;
     } catch (error) {
-
       throw error;
     }
   };

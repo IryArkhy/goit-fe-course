@@ -16,17 +16,16 @@ import {
 } from 'q';
 
 
-const removeListItem = async element => {
+const removeListItem =  element => {
   const parentListItem = element.closest('.note-list__item');
   const id = parentListItem.dataset.id;
-  try {
-    await notepad.deleteNote(id);
-    parentListItem.remove();
 
-  } catch (error) {
-    console.log("Error while deleting note ", error);
+  notepad.deleteNote(id)
+  .catch(error => {
+    console.log(error)
     notyf.error(NOTIFICATION_MESSAGES.ERROR);
-  };
+    });
+parentListItem.remove();
 }
 
 
@@ -38,7 +37,6 @@ const handleDeleteNote = ({
   const action = iParent.dataset.action;
   if (action === noteActions.DELETE) {
     removeListItem(target);
-    console.log(target)
     notyf.success(NOTIFICATION_MESSAGES.NOTE_DELETED_SUCCESS);
   }
 }
