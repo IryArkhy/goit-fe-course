@@ -23,13 +23,8 @@ export default class Notepad {
     return this._notes;
   }
   async getNotes() {
-    try {
-      const getNotes = await api.getNotes(); // 
-      return this._notes = await getNotes;
-    } catch (error) {
-      console.log(Error, "Error while getting notes");
-
-    }
+    const getNotes = await api.getNotes(); // 
+    return this._notes = getNotes;
   };
 
   findNoteById(id) {
@@ -39,23 +34,31 @@ export default class Notepad {
   async saveNote(note) {
     try {
       await api.addNote(note);
+      const notesArr = await this.getNotes();
+      const noteID = notesArr[notesArr.length -1].id;
+      note.id = noteID;
       this._notes.push(note);
+
       return note;
     } catch (error) {
       console.log(Error, "Error while saving note");
-
     }
   };
 
   async deleteNote(id) {
     try {
-      await api.deleteNote(id);
-      this._notes =  this._notes.filter(item => item.id !== id);
-      return this._notes;
+      const deletedNote = this.findNoteById(id);
+      if (deletedNote) {
+        await api.deleteNote(id);
+        this._notes = this._notes.filter(item => item.id !== id);
+
+        return this._notes;
+      }
     } catch (error) {
       throw error;
     }
   };
+
 
   async updateNoteContent(id, updatedContent) {
     try {
